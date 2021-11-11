@@ -97,7 +97,6 @@
 
 #include "../../lib/kstrtox.h"
 
-
 /* NOTE:
  *	Implementing inode permission operations in /proc is almost
  *	certainly an error.  Permission checks need to happen during
@@ -964,7 +963,6 @@ static const struct file_operations proc_mem_operations = {
 	.open		= mem_open,
 	.release	= mem_release,
 };
-
 
 static int environ_open(struct inode *inode, struct file *file)
 {
@@ -1942,7 +1940,6 @@ int pid_getattr(struct vfsmount *mnt, struct dentry *dentry, struct kstat *stat)
 	rcu_read_unlock();
 	return 0;
 }
-
 
 /* dentry stuff */
 
@@ -3566,7 +3563,6 @@ static const struct pid_entry tid_base_stuff[] = {
 #ifdef CONFIG_CPU_FREQ_TIMES
 	ONE("time_in_state", 0444, proc_time_in_state_show),
 #endif
-
 };
 
 static int proc_tid_base_readdir(struct file *file, struct dir_context *ctx)
